@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.library.controller.EmpruntController">
+    <SplitPane dividerPositions="0.43816844919786085" layoutY="1.0" prefHeight="400.0" prefWidth="600.0">
+        <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="left-form" stylesheets="@CSS/style.css">
+                <children>
+
+                    <Label alignment="CENTER" layoutX="13.0" layoutY="178.0" prefHeight="43.0" prefWidth="233.0" text="Retourner un Livre" textAlignment="CENTER" textFill="#d7d930" underline="true">
+                        <font>
+                            <Font name="System Bold" size="23.0" />
+                        </font>
+                    </Label>
+                </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                <children>
+
+                    <Button layoutX="93.0" layoutY="225.0" onAction="#retournerEmprunt" prefHeight="43.0" prefWidth="147.0" text="Retourner Livre" />
+
+                    <TextField fx:id="txtIdEmprunt" layoutX="65.0" layoutY="172.0" prefHeight="26.0" prefWidth="204.0" promptText="Id Emprunt" />
+                </children>
+            </AnchorPane>
+        </items>
+    </SplitPane>
+
+    <Label fx:id="lblResultat" layoutX="10" layoutY="320" textFill="#e10d0d" />
+
+</AnchorPane>

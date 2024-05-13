@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.library.controller.EmpruntController">
+    <SplitPane dividerPositions="0.43816844919786085" layoutY="1.0" prefHeight="400.0" prefWidth="600.0">
+        <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="left-form" stylesheets="@CSS/style.css">
+                <children>
+
+                    <Label alignment="CENTER" layoutX="13.0" layoutY="178.0" prefHeight="43.0" prefWidth="233.0" text="Emprunter un Livre" textAlignment="CENTER" textFill="#cfd130" underline="true">
+                        <font>
+                            <Font name="System Bold" size="23.0" />
+                        </font>
+                    </Label>
+                </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                <children>
+            
+                <TextField fx:id="txtCodeLivre" layoutX="67.0" layoutY="97.0" prefHeight="26.0" prefWidth="182.0" promptText="codeLivre" />
+                <TextField fx:id="txtCodeLecteur" layoutX="67.0" layoutY="140.0" prefHeight="26.0" prefWidth="182.0" promptText="codeLecteur" />
+                <TextField fx:id="txtDateEmprunt" layoutX="67.0" layoutY="186.0" prefHeight="26.0" prefWidth="182.0" promptText="dateEmprunt" />
+                <TextField fx:id="txtDateRetourPrevu" layoutX="67.0" layoutY="232.0" prefHeight="26.0" prefWidth="182.0" promptText="dateRetourPrevu" />
+
+                    <Button layoutX="84.0" layoutY="291.0" onAction="#ajouterEmprunt" prefHeight="43.0" prefWidth="147.0" text="Ajouter" />
+                </children>
+            </AnchorPane>
+        </items>
+    </SplitPane>
+
+    <Label fx:id="lblResultat" layoutX="10" layoutY="320" textFill="#dc760c"/>
+
+</AnchorPane>

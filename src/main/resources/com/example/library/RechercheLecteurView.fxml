@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefWidth="521.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.library.controller.RechercheLecteurController">
+
+    <VBox alignment="CENTER" prefWidth="536.0" spacing="10">
+        <Label text="Recherche de Lecteur">
+            <font>
+                <Font size="20.0" />
+            </font>
+         <VBox.margin>
+            <Insets top="15.0" />
+         </VBox.margin>
+        </Label>
+        <Label fx:id="lblResultat" />
+        <HBox spacing="10">
+            <TextField fx:id="cinField" prefHeight="26.0" prefWidth="117.0" promptText="Num CIN">
+                <HBox.margin>
+                    <Insets left="15.0" />
+                </HBox.margin>
+            </TextField>
+            <TextField fx:id="nomField" prefHeight="26.0" prefWidth="164.0" promptText="Nom de lecteur" />
+            <Button onAction="#rechercherLecteur" prefHeight="26.0" prefWidth="103.0" text="Rechercher" />
+        </HBox>
+
+        <TableView fx:id="lecteurTable">
+            <columns>
+                <TableColumn fx:id="codeColumn" prefWidth="117.0" text="CIN">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="cinProperty" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="titreColumn" prefWidth="118.0" text="Nom">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="nomProperty" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="auteurColumn" prefWidth="130.0" text="Prénom">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="prenomProperty" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="nbLivreColumn" prefWidth="170.0" text="Abonnement">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="abonnementProperty" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </VBox>
+</AnchorPane>

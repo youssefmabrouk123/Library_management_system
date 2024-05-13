@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.library.controller.RechercheEmpruntController">
+
+    <VBox alignment="CENTER" prefHeight="456.0" prefWidth="600.0" spacing="10">
+        <Label alignment="CENTER" prefHeight="30.0" prefWidth="195.0" text="Liste des emprunts">
+            <font>
+                <Font size="20.0" />
+            </font>
+            <VBox.margin>
+                <Insets top="15.0" />
+            </VBox.margin>
+        </Label>
+      <Button mnemonicParsing="false" onAction="#loadEmpruntsFromDatabase" text="Refresh" />
+      <Label fx:id="lblresultat" />
+
+        <TableView fx:id="empruntTable" prefHeight="394.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="idEmpruntColumn" prefWidth="87.2" text="ID Emprunt">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="idEmpruntProperty" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="codeLivreColumn" prefWidth="76.0" text="Code Livre">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="codeLivreProperty" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="codeLecteurColumn" prefWidth="85.6" text="Code Lecteur">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="codeLecteurProperty" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="dateEmpruntColumn" prefWidth="97.60003662109375" text="Date Emprunt">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="dateEmpruntProperty" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="dateRetourPrevuColumn" prefWidth="124.79998779296875" text="Date Retour Prévu">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="dateRetourPrevuProperty" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="dateRetourEffectiveColumn" prefWidth="128.79998779296875" text="Date Retour Effectif">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="dateRetourEffectiveProperty" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </VBox>
+</AnchorPane>

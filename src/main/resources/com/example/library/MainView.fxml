@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="396.0" prefWidth="657.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.library.controller.MainController">
+   <ImageView fitHeight="447.0" fitWidth="693.0" layoutX="-18.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@img/bg2.jpg" />
+      </image>
+   </ImageView>
+    <Button layoutX="52.0" layoutY="126.0" mnemonicParsing="false" onAction="#handleAjouterUnLivre" prefHeight="38.0" prefWidth="140.0" text="Ajouter un livre" />
+    <Button layoutX="52.0" layoutY="210.0" mnemonicParsing="false" onAction="#handleSupprimerUnLivre" prefHeight="38.0" prefWidth="140.0" text="Supprimer un livre" />
+    <Button layoutX="52.0" layoutY="298.0" mnemonicParsing="false" onAction="#handleChercherUnLivre" prefHeight="38.0" prefWidth="140.0" text="Rechercher un livre" />
+    <Button layoutX="252.0" layoutY="126.0" mnemonicParsing="false" onAction="#handleAjouterUnLecteur" prefHeight="38.0" prefWidth="140.0" text="Ajouter un lecteur" />
+    <Button layoutX="252.0" layoutY="210.0" mnemonicParsing="false" onAction="#handleSupprimerUnLecteur" prefHeight="38.0" prefWidth="140.0" text="Supprimer un lecteur" />
+    <Button layoutX="253.0" layoutY="298.0" mnemonicParsing="false" onAction="#handleChercherUnLecteur" prefHeight="38.0" prefWidth="140.0" text="Chercher un lecteur" />
+    <Button layoutX="461.0" layoutY="126.0" mnemonicParsing="false" onAction="#handleEmprunterLivre" prefHeight="38.0" prefWidth="140.0" text="Emprunter un livre" />
+    <Button layoutX="461.0" layoutY="210.0" mnemonicParsing="false" onAction="#handleReturnLivre" prefHeight="38.0" prefWidth="140.0" text="Retourner un livre" />
+    <Button layoutX="461.0" layoutY="298.0" mnemonicParsing="false" onAction="#handleListeEmprunt" prefHeight="38.0" prefWidth="140.0" text="Liste emprunts" />
+    <Label layoutX="216.0" layoutY="30.0" prefHeight="75.0" prefWidth="220.0" text="ACCUEIL" textFill="#ffd9d9">
+        <font>
+            <Font name="System Bold Italic" size="52.0" />
+        </font>
+    </Label>
+
+</AnchorPane>

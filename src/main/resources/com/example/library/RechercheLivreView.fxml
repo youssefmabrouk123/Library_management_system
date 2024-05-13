@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.library.controller.RechercheLivreController">
+
+    <VBox alignment="CENTER" spacing="10">
+        <Label text="Recherche de Livre">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="lblResultat" layoutX="10" layoutY="320" />
+        <HBox spacing="10">
+            <TextField fx:id="titreField" prefHeight="26.0" prefWidth="183.0" promptText="Titre">
+                <HBox.margin>
+                    <Insets left="15.0" />
+                </HBox.margin>
+            </TextField>
+            <TextField fx:id="auteurField" prefHeight="26.0" prefWidth="182.0" promptText="Auteur" />
+            <Button onAction="#rechercherLivre" prefHeight="26.0" prefWidth="103.0" text="Rechercher" />
+        </HBox>
+
+        <TableView fx:id="resultatsTable">
+            <columns>
+                <TableColumn fx:id="codeColumn" prefWidth="83.99996644258499" text="Code">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="code" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="titreColumn" prefWidth="76.0" text="Titre">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="title" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="auteurColumn" prefWidth="101.60003662109375" text="Auteur">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="author" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="nbLivreColumn" prefWidth="84.0" text="NbLivre">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="nbLivre" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="isbnColumn" prefWidth="96.79998779296875" text="ISBN">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="isbn" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="typeColumn" prefWidth="113.60000610351562" text="Type">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="type" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+
+    </VBox>
+
+</AnchorPane>

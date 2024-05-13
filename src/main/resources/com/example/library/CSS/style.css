@@ -1,0 +1,22 @@
+.left-form{
+    -fx-background-color:linear-gradient(to bottom right, #272b3f, #256b51);
+    -fx-border-color:#000;
+    -fx-border-width:.4px 0px .4px .4px;
+}
+
+/* styles.css */
+
+.green-button {
+    -fx-background-color: #4CAF50; /* Couleur de fond verte */
+    -fx-text-fill: white; /* Couleur du texte blanc */
+}
+
+.blue-button {
+    -fx-background-color: #3498db; /* Couleur de fond bleue */
+    -fx-text-fill: white; /* Couleur du texte blanc */
+}
+
+.red-button {
+    -fx-background-color: #e74c3c; /* Couleur de fond rouge */
+    -fx-text-fill: white; /* Couleur du texte blanc */
+}

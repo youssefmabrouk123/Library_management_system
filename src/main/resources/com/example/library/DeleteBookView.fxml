@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.library.controller.LivreController">
+    <SplitPane dividerPositions="0.43816844919786085" layoutY="1.0" prefHeight="400.0" prefWidth="600.0">
+        <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="left-form" stylesheets="@CSS/style.css">
+                <children>
+
+                    <Label alignment="CENTER" layoutX="17.0" layoutY="178.0" prefHeight="43.0" prefWidth="226.0" text="Suppression d'un Livre" textAlignment="CENTER" textFill="#d9d930" underline="true">
+                        <font>
+                            <Font name="System Bold" size="21.0" />
+                        </font>
+                    </Label>
+                </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <Label layoutX="13.0" layoutY="347.0" prefHeight="43.0" prefWidth="308.0" text="Rq: Suppirmer selon un champ que vous le connaissez !" textAlignment="JUSTIFY" />
+            <SplitPane dividerPositions="0.5" layoutY="3.0" orientation="VERTICAL" prefHeight="350.0" prefWidth="334.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                            <TextField fx:id="titreField" layoutX="50.0" layoutY="48.0" prefHeight="26.0" prefWidth="206.0" promptText="Titre du livre" />
+                        <Button layoutX="80.0" layoutY="94.0" onAction="#supprimerLivreParTitre" prefHeight="43.0" prefWidth="147.0" text="Supprimer avec titre" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                            <Button layoutX="92.0" layoutY="96.0" onAction="#supprimerLivreParISBN" prefHeight="43.0" prefWidth="147.0" text="Supprimer avec ISBN" />
+                            <TextField fx:id="isbnField" layoutX="62.0" layoutY="47.0" prefHeight="26.0" prefWidth="206.0" promptText="ISBN" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+            </AnchorPane>
+        </items>
+    </SplitPane>
+
+    <Label fx:id="lblResultat" layoutX="10" layoutY="320" textFill="#ef0909" />
+
+</AnchorPane>
